@@ -103,7 +103,7 @@ O projeto já inclui breakpoints otimizados:
 ---
 
 
-### 💡 **Ideias de Melhorias**
+### 💡 **Ideias para Melhorias**
 
 - 🌙 Toggle para tema claro/escuro
 - 🏷️ Sistema de categorias/tags

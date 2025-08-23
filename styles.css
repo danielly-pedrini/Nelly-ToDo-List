@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilo do corpo da página com tema dark */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #121212; /* Fundo preto para tema dark */
+  color: #ffffff; /* Texto branco */
+  min-height: 100vh; /* Altura mínima da viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d); /* Gradiente escuro */
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4); /* Gradiente colorido */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 1.2rem;
+  color: #b0b0b0; /* Cor cinza claro */
+  font-weight: 300;
+}
+
+/* Container principal */
+main {
+  flex: 1; /* Ocupa o espaço restante */
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Formulário para adicionar nova tarefa */
+.add-task-form {
+  background: #1e1e1e; /* Fundo escuro */
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Container do formulário */
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap; /* Permite quebra de linha em telas pequenas */
+}
+
+/* Estilo dos inputs */
+input[type='text'] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #ffffff;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+/* Foco no input */
+input[type='text']:focus {
+  outline: none;
+  border-color: #4ecdc4; /* Cor de destaque */
+}
+
+/* Checkbox para prioridade */
+.priority-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b0b0b0;
+}
+
+/* Botão de adicionar */
+.btn-add {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+/* Efeito hover no botão adicionar */
+.btn-add:hover {
+  transform: translateY(-2px);
+}
+
+/* Container das seções */
+.sections-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 2rem;
+  min-height: 400px;
+}
+
+/* Primeira seção - Tarefas pendentes */
+.section-pending {
+  background: linear-gradient(
+    135deg,
+    #2d1b69,
+    #11998e
+  ); /* Gradiente roxo-azul */
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 40px rgba(45, 27, 105, 0.3);
+}
+
+/* Segunda seção - Tarefas concluídas */
+.section-completed {
+  background: linear-gradient(
+    135deg,
+    #11998e,
+    #2d1b69
+  ); /* Gradiente invertido */
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 40px rgba(17, 153, 142, 0.3);
+}
+
+/* Títulos das seções */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Lista de tarefas */
+.task-list {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto; /* Scroll se necessário */
+}
+
+/* Item individual da tarefa */
+.task-item {
+  background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+  margin-bottom: 0.8rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px); /* Efeito de vidro */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease;
+}
+
+/* Hover no item da tarefa */
+.task-item:hover {
+  transform: translateY(-2px);
+}
+
+/* Texto da tarefa */
+.task-text {
+  flex: 1;
+  margin-right: 1rem;
+  word-break: break-word; /* Quebra palavras longas */
+}
+
+/* Tarefa prioritária (texto vermelho) */
+.priority-task {
+  color: #ff4757 !important; /* Vermelho para prioridade */
+  font-weight: bold;
+}
+
+/* Tarefa concluída (texto riscado) */
+.completed-task {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Container dos botões de ação */
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Botões de ação */
+.btn-action {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+/* Botão editar (azul) */
+.btn-edit {
+  background: #3742fa;
+}
+
+/* Botão excluir (vermelho) */
+.btn-delete {
+  background: #ff3838;
+}
+
+/* Botão concluir (verde) */
+.btn-complete {
+  background: #2ed573;
+}
+
+/* Botão restaurar (laranja) */
+.btn-restore {
+  background: #ffa502;
+}
+
+/* Hover nos botões */
+.btn-action:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Mensagem quando não há tarefas */
+.empty-message {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* RESPONSIVIDADE PARA MOBILE */
+@media (max-width: 768px) {
+  /* Título menor em mobile */
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* Formulário responsivo */
+  .form-group {
+    flex-direction: column;
+  }
+
+  input[type='text'] {
+    min-width: 100%;
+  }
+
+  /* Seções em coluna única no mobile */
+  .sections-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* INVERSÃO DAS CORES NO MOBILE */
+  .section-pending {
+    background: linear-gradient(
+      135deg,
+      #11998e,
+      #2d1b69
+    ); /* Cores invertidas */
+    order: 1; /* Mantém ordem visual */
+  }
+
+  .section-completed {
+    background: linear-gradient(
+      135deg,
+      #2d1b69,
+      #11998e
+    ); /* Cores invertidas */
+    order: 2;
+  }
+
+  /* Botões menores no mobile */
+  .btn-action {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  /* Ajuste do item da tarefa para mobile */
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .task-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* Animação de entrada para novas tarefas */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animação aos novos itens */
+.task-item.new-task {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Scrollbar personalizada */
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

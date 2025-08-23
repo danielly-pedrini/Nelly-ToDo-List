@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta tags para configuração básica da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Nelly To-Do List</title>
+    >
+    
+<body>
+  <header>
+        <h1>Nelly To-Do List</h1>
+        <h2 class="subtitle">Simplifique sua rotina com praticidade</h2>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Formulário para adicionar nova tarefa -->
+        <div class="add-task-form">
+            <div class="form-group">
+                <!-- Input para o texto da tarefa -->
+                <input type="text" id="taskInput" placeholder="Digite sua nova tarefa...">
+                
+                <!-- Checkbox para marcar como prioridade -->
+                <div class="priority-checkbox">
+                    <input type="checkbox" id="priorityCheckbox">
+                    <label for="priorityCheckbox">Prioridade</label>
+                </div>
+                
+                <!-- Botão para adicionar a tarefa -->
+                <button class="btn-add" onclick="addTask()">
+                    <i class="fas fa-plus"></i> Adicionar
+                </button>
+            </div>
+        </div>
+
+        <!-- Container das duas seções -->
+        <div class="sections-container">
+            <!-- Primeira seção: Tarefas pendentes -->
+            <div class="section-pending">
+                <h2 class="section-title">
+                    <i class="fas fa-tasks"></i> Tarefas Pendentes
+                </h2>
+                <!-- Lista de tarefas pendentes -->
+                <ul class="task-list" id="pendingTasks">
+                    <li class="empty-message">Nenhuma tarefa pendente</li>
+                </ul>
+            </div>
+
+            <!-- Segunda seção: Tarefas concluídas -->
+            <div class="section-completed">
+                <h2 class="section-title">
+                    <i class="fas fa-check-circle"></i> Tarefas Concluídas
+                </h2>
+                <!-- Lista de tarefas concluídas -->
+                <ul class="task-list" id="completedTasks">
+                    <li class="empty-message">Nenhuma tarefa concluída</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

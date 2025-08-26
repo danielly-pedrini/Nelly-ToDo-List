@@ -4,7 +4,7 @@ O **Nelly To-Do List** é uma aplicação web moderna e intuitiva para gerenciam
 
 <img src="./src/img 1.jpeg" alt="imagem 1">
 <br>
-<img src="./src/img 1.jpeg" alt="imagem 2">
+<img src="./src/img 2.jpeg" alt="imagem 2">
 
 ## 📋 Sobre o Projeto
 

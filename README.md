@@ -1,15 +1,12 @@
 # 🎯 Nelly To-Do List
+
 O **Nelly To-Do List** é uma aplicação web moderna e intuitiva para gerenciamento de tarefas, desenvolvida com foco na simplicidade e eficiência. Com design responsivo e tema dark elegante, permite organizar suas atividades diárias de forma prática e visual.
 
-
-
-
-
-
-
+<img src="./src/img 1.jpeg" alt="imagem 1">
+<br>
+<img src="./src/img 1.jpeg" alt="imagem 2">
 
 ## 📋 Sobre o Projeto
-
 
 ### ✨ Destaques
 
@@ -24,13 +21,15 @@ O **Nelly To-Do List** é uma aplicação web moderna e intuitiva para gerenciam
 ## ⭐ Funcionalidades
 
 ### 🎯 **Principais**
+
 - ➕ **Adicionar Tarefas** - Criação rápida com sistema de prioridade
-- ✏️ **Editar Tarefas** - Modificação inline simples e intuitiva  
+- ✏️ **Editar Tarefas** - Modificação inline simples e intuitiva
 - ✅ **Concluir/Restaurar** - Controle completo do estado das tarefas
 - 🗑️ **Excluir Tarefas** - Remoção segura com confirmação
 - 🔴 **Sistema de Prioridade** - Destaque visual para tarefas importantes
 
 ### 🔧 **Técnicas**
+
 - 💾 **LocalStorage** - Persistência automática de dados
 - ⌨️ **Atalhos de Teclado** - Pressione Enter para adicionar tarefas
 - 📤 **Backup de Dados** - Exportação em formato JSON
@@ -38,6 +37,7 @@ O **Nelly To-Do List** é uma aplicação web moderna e intuitiva para gerenciam
 - 📱 **Design Adaptável** - Layout otimizado para diferentes telas
 
 ### 🛠️ **Avançadas**
+
 - 🔍 **Separação Visual** - Tarefas pendentes e concluídas em seções distintas
 - 🎨 **Tema Responsivo** - Cores diferentes para mobile e desktop
 - 🔄 **Auto-save** - Salvamento automático a cada ação
@@ -78,7 +78,6 @@ O **Nelly To-Do List** é uma aplicação web moderna e intuitiva para gerenciam
 
 ---
 
-
 ## 📂 Estrutura do Projeto
 
 ```
@@ -92,16 +91,15 @@ nelly-todo-list/
 
 ---
 
-
 ### 📱 **Responsividade**
 
 O projeto já inclui breakpoints otimizados:
+
 - **Desktop**: > 768px
-- **Tablet**: 768px - 480px  
+- **Tablet**: 768px - 480px
 - **Mobile**: < 480px
 
 ---
-
 
 ### 💡 **Ideias para Melhorias**
 
@@ -116,6 +114,3 @@ O projeto já inclui breakpoints otimizados:
 - 📈 Gráficos de produtividade
 
 ---
-
-
-

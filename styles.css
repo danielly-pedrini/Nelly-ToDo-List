@@ -113,8 +113,8 @@ input[type='text']:focus {
 .sections-container {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
-  gap: 2rem;
-  min-height: 400px;
+  gap: 1.5rem;
+  min-height: 300px;
 }
 
 /* Primeira seção - Tarefas pendentes */
